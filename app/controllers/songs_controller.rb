@@ -30,7 +30,6 @@ end
 
 get '/songs/:slug/edit' do
   @song = Song.find_by_slug(params[:slug])
-  binding.pry
   erb :'/songs/edit'
 end
 
