@@ -21,7 +21,7 @@ post '/songs' do
   @song = Song.create(:name => params[:song_name])
   @song.artist = Artist.find_or_create_by(:name => params["Artist Name"])
   binding.pry
-  @song.genres << Genre.find_or_create_by(:name => params["Genre Name"])
+  @song.genres << Genre.find_or_create_by(:name => params["genre_name"])
   @song.save
   flash[:message] = "Successfully created song."
 
