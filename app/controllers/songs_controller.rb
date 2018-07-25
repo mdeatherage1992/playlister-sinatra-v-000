@@ -29,8 +29,8 @@ post '/songs' do
 end
 
 get '/songs/:slug/edit' do
-  binding.pry
   @song = Song.find_by_slug(params[:slug])
+  binding.pry
   erb :'/songs/edit'
 end
 
